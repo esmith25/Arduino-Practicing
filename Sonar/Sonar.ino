@@ -23,16 +23,7 @@ distance = duration*0.034/2; //Convertion formula to Centimeters
 Serial.print("Distance: "); //Displays the word "Distance"
 Serial.println(distance); //Displays the distance we want
 //Done on Arduino Side
-
-
-
-//Communicating to RoboRIO 
-/*if (Serial.available() > 0)
-{
-  String msg = Serial.readString();
-  if (msg == "Requesting Sonar")
-  {
-    Serial.print(distance);
-    }
-  }
 }
+
+
+

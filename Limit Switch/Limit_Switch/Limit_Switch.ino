@@ -1,23 +1,13 @@
-//Limit Switch code using an LED light to test to see if it is working
-static const int LIMIT_SWITCH_INPUT = 0;
-static const int LIMIT_SWITCH_OUTPUT = 3;
-
+static const int LIMIT_SWITCH_PORT = 2;
+static const int LED_PORT = 3;
+int whocares = 0;
 void setup() {
   Serial.begin(9600);
- // pinMode(LIMIT_SWITCH_INPUT, INPUT);
-  analogRead(LIMIT_SWITCH_INPUT);
+  pinMode(LIMIT_SWITCH_PORT, INPUT);
+  pinMode(LED_PORT, OUTPUT);
 }
 
 void loop() {
-/*if(digitalRead(LIMIT_SWITCH_INPUT) == HIGH)
-{
-digitalWrite(LIMIT_SWITCH_OUTPUT, HIGH);
-  }
-else
-{
-  digitalWrite(LIMIT_SWITCH_OUTPUT, LOW);
-
-  }
-  */
-  
+  whocares = digitalRead(LIMIT_SWITCH_PORT);
+  digitalWrite(LED_PORT, whocares);
 }
